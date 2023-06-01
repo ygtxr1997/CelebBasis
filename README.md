@@ -13,17 +13,16 @@
   <span class="author-block">
     <a href="https://scholar.google.com/citations?user=ym_t6QYAAAAJ&hl=zh-CN&oi=sra" target="_blank">Maomao Li</a><sup>2,*</sup>,
   </span>
-<span class="author-block"><a href="https://chenyangqiqi.github.io/" target="_blank">Chenyang Qi</a><sup>3</sup></span>,
+<span class="author-block"><a href="https://chenyangqiqi.github.io/" target="_blank">Chenyang Qi</a><sup>3</sup></span>, <br>
   <span class="author-block">
     <a href="https://xinntao.github.io/" target="_blank">Xintao Wang</a><sup>2</sup>,
   </span>
   <span class="author-block">
     <a href="https://scholar.google.com/citations?hl=zh-CN&user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>2</sup>,
   </span>
-  and
   <span class="author-block">
     <a href="https://scholar.google.com/citations?user=CCUQi50AAAAJ" target="_blank">Huicheng Zheng</a><sup>1,*</sup>
-  </span>
+  </span> (* Corresponding Authors)
   </div>
 
   
@@ -37,7 +36,7 @@
 
 **TL;DR: Intergrating a unique individual into the pre-trained diffusion model with:** 
 
-✅ just <b>one</b> facial photograph &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+✅ just <b>one</b> facial photograph &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ✅ only <b>1024</b> learnable parameters &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ✅ in <b>3</b> minutes tunning &nbsp;&nbsp;&nbsp;&nbsp;
 </br>✅ Textural-Inversion compatibility &nbsp;&nbsp;&nbsp;&nbsp; ✅ Genearte and interact with other (new person) concepts </br>
