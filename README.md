@@ -2,6 +2,7 @@
 
 [ArXiv]() | [Project Page](celeb-basis.github.io) 
 
+<div>
 <span class="author-block">
 <a href="https://github.com/ygtxr1997" target="_blank">Ge Yuan</a><sup>1</sup></span>,
 <span class="author-block">
@@ -19,10 +20,11 @@
   <span class="author-block">
     <a href="https://scholar.google.com/citations?hl=zh-CN&user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>2</sup>,
   </span>
+  and
   <span class="author-block">
     <a href="https://scholar.google.com/citations?user=CCUQi50AAAAJ" target="_blank">Huicheng Zheng</a><sup>1,*</sup>
   </span>
-  
+  </div>
 
   
 <div class="is-size-5 publication-authors">
@@ -54,5 +56,16 @@ First, we collect about 1,500 celebrity names as the initial collection. Then, w
 
 We then personalize the model using input photo. During training~(left), we optimize the coefficients of the celeb basis with the help of a fixed face encoder. During inference~(right), we combine the learned personalized weights and shared celeb basis to generate images with the input identity.
 
+More details can be founded in our [project page](celeb-basis.github.io) 
 
-More details can be founded in our [project page](celeb-basis.github.io) Codes coming soon!
+### TODO
+- [ ] release code
+- [ ] release WebUI extension
+- [ ] 
+
+### BibTex
+
+```tex
+TBD
+
+```
