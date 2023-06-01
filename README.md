@@ -60,8 +60,11 @@ More details can be founded in our [project page](celeb-basis.github.io)
 
 ### TODO
 - [ ] release code
+- [ ] release celeb basis names
 - [ ] release WebUI extension
-- [ ] 
+- [ ] release automatic name filter
+- [ ] finetuning with multiple persons 
+- [ ] finetuning with LORA
 
 ### BibTex
 
