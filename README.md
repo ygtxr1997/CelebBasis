@@ -1,4 +1,4 @@
-# CelebBasis: [Inserting Anybody in Diffusion Models via Celeb Basis]()
+# Inserting Anybody in Diffusion Models via Celeb Basis
 
 [ArXiv]() | [Project Page](celeb-basis.github.io) 
 
