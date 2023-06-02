@@ -1,6 +1,6 @@
 # Inserting Anybody in Diffusion Models via Celeb Basis
 
-[ArXiv]() | [Project Page](https://celeb-basis.github.io) 
+[ArXiv](https://arxiv.org/abs/2306.00926) | [Project Page](https://celeb-basis.github.io) 
 
 <div>
 <span class="author-block">
