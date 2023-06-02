@@ -68,6 +68,10 @@ More details can be founded in our [project page](celeb-basis.github.io)
 ### BibTex
 
 ```tex
-TBD
-
+@article{yuan2023celebbasis,
+  title={Inserting Anybody in Diffusion Models via Celeb Basis},
+  author={Yuan, Ge and Cun, Xiaodong and Zhang, Yong and Li, Maomao and Qi, Chenyang and Wang, Xintao and Shan, Ying and Zheng, Huicheng},
+  journal={arXiv preprint arXiv:2306.00926},
+  year={2023}
+}
 ```
