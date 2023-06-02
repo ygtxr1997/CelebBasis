@@ -55,7 +55,7 @@ First, we collect about 1,500 celebrity names as the initial collection. Then, w
 
 We then personalize the model using input photo. During training~(left), we optimize the coefficients of the celeb basis with the help of a fixed face encoder. During inference~(right), we combine the learned personalized weights and shared celeb basis to generate images with the input identity.
 
-More details can be founded in our [project page](celeb-basis.github.io) 
+More details can be founded in our [project page](https://celeb-basis.github.io).
 
 ### TODO
 - [ ] release code
