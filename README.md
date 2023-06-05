@@ -4,7 +4,7 @@
 
 <div>
 <span class="author-block">
-<a href="https://github.com/ygtxr1997" target="_blank">Ge Yuan</a><sup>1</sup></span>,
+<a href="https://ygtxr1997.github.io/" target="_blank">Ge Yuan</a><sup>1,2</sup></span>,
 <span class="author-block">
   <a href="http://vinthony.github.io/" target="_blank">Xiaodong Cun</a><sup>2</sup></span>,
 <span class="author-block">
@@ -13,7 +13,7 @@
   <span class="author-block">
     <a href="https://scholar.google.com/citations?user=ym_t6QYAAAAJ&hl=zh-CN&oi=sra" target="_blank">Maomao Li</a><sup>2,*</sup>,
   </span>
-<span class="author-block"><a href="https://chenyangqiqi.github.io/" target="_blank">Chenyang Qi</a><sup>3</sup></span>, <br>
+<span class="author-block"><a href="https://chenyangqiqi.github.io/" target="_blank">Chenyang Qi</a><sup>3,2</sup></span>, <br>
   <span class="author-block">
     <a href="https://xinntao.github.io/" target="_blank">Xintao Wang</a><sup>2</sup>,
   </span>
@@ -55,7 +55,7 @@ First, we collect about 1,500 celebrity names as the initial collection. Then, w
 
 We then personalize the model using input photo. During training~(left), we optimize the coefficients of the celeb basis with the help of a fixed face encoder. During inference~(right), we combine the learned personalized weights and shared celeb basis to generate images with the input identity.
 
-More details can be founded in our [project page](https://celeb-basis.github.io).
+More details can be found in our [project page](https://celeb-basis.github.io).
 
 ### TODO
 - [ ] release code
