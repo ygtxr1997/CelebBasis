@@ -11,14 +11,14 @@ for (( i=0; i<train_len; i++)) do
   folder2=${train_set2[i]}
 #  python main.py --base configs/stable-diffusion/v1-finetune.yaml \
 #               -t \
-#               --actual_resume /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#               --actual_resume ./weights/sd-v1-4-full-ema.ckpt \
 #               -n textualinversion_v \
 #               --gpus 0, \
 #               --data_root /gavin/datasets/aigc_id/dataset_for_baseline/"${folder1}" \
 #               --init_word person
   python main.py --base configs/stable-diffusion/v1-finetune.yaml \
                -t \
-               --actual_resume /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+               --actual_resume ./weights/sd-v1-4-full-ema.ckpt \
                -n textualinversion_v \
                --gpus 0, \
                --data_root /gavin/datasets/aigc_id/dataset_for_baseline/"${folder2}" \

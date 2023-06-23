@@ -12,7 +12,7 @@ step_list=(799)  # e.g. (99 199 299 399)
 # ------------------------------------------------------
 
 # Usage Example:
-# ./03_extract.sh "/gavin/pretrained/sd-v1-4-full-ema.ckpt" "training2023-06-21T14-44-46_celebbasis"
+# ./03_extract.sh "./weights/sd-v1-4-full-ema.ckpt" "training2023-06-21T14-44-46_celebbasis"
 
 
 project_folder="${PROJECT_FOLDER}"

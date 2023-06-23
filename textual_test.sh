@@ -25,7 +25,7 @@ project_folder="id82023-05-15T17-12-44_textualinversion_v"
 #        --scale 10.0 \
 #        --ddim_steps 50 \
 #        --embedding_path logs/"$project_folder"/checkpoints/embeddings_gs-"$val2".pt \
-#        --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#        --ckpt ./weights/sd-v1-4-full-ema.ckpt \
 #        --config "configs/stable-diffusion/v1-inference.yaml" \
 #        --outdir outputs/"$project_folder"  \
 #        --prompt "$val1"
@@ -41,7 +41,7 @@ for val2 in "${step_list[@]}"; do
       --scale 10.0 \
       --ddim_steps 50 \
       --embedding_path logs/"$project_folder"/checkpoints/embeddings_gs-"$val2".pt \
-      --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+      --ckpt ./weights/sd-v1-4-full-ema.ckpt \
       --config "configs/stable-diffusion/v1-inference.yaml" \
       --outdir outputs/"$project_folder"  \
       --from-file /gavin/datasets/aigc_id/dataset_for_baseline/exp_baseline_ti.txt

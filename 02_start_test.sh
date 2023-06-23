@@ -15,7 +15,7 @@ eval_id2_list=(1)  # the id of the 2nd person, e.g. (0 1 2 3 4)
 # ------------------------------------------------------
 
 # Usage Example:
-# ./start_test.sh "/gavin/pretrained/sd-v1-4-full-ema.ckpt" "./infer_images/example_prompt.txt" "training2023-06-21T16-40-29_celebbasis"
+# ./start_test.sh "./weights/sd-v1-4-full-ema.ckpt" "./infer_images/example_prompt.txt" "training2023-06-21T16-40-29_celebbasis"
 
 
 #################### BEGIN #######################
@@ -163,7 +163,7 @@ prompt_list=(
 #        --scale 10.0 \
 #        --ddim_steps 50 \
 #        --embedding_path logs/training2023-03-29T11-19-46_textualinversion/checkpoints/embeddings_gs-49999.pt \
-#        --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#        --ckpt ./weights/sd-v1-4-full-ema.ckpt \
 #        --prompt "$step_id"
 #done
 
@@ -174,7 +174,7 @@ prompt_list=(
 #    --scale 10.0 \
 #    --ddim_steps 50 \
 #    --embedding_path logs/training2023-04-04T17-14-14_textualinversion/checkpoints/embeddings_gs-9999.pt \
-#    --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#    --ckpt ./weights/sd-v1-4-full-ema.ckpt \
 #    --from-file ./infer_images/personalize.txt
 
 
@@ -187,7 +187,7 @@ prompt_list=(
 #      --scale 10.0 \
 #      --ddim_steps 50 \
 #      --embedding_path logs/training2023-04-17T22-27-34_textualinversion/checkpoints/embeddings_gs-7999.pt \
-#      --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#      --ckpt ./weights/sd-v1-4-full-ema.ckpt \
 #      --from-file ./infer_images/wiki_names_"$a_prompt".txt
 #done
 
@@ -198,5 +198,5 @@ prompt_list=(
 #    --scale 10.0 \
 #    --ddim_steps 50 \
 #    --embedding_path logs/training2023-03-30T21-21-35_textualinversion/checkpoints/embeddings_gs-2999.pt \
-#    --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+#    --ckpt ./weights/sd-v1-4-full-ema.ckpt \
 #    --from-file ./infer_images/interpolation.txt

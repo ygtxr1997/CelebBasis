@@ -1,0 +1,25 @@
+a * person is playing the basketball
+a * person is playing the guitar
+a * person plays the LEGO toys
+a * person eats bread in front of the Eiffel Tower
+a * person on the beach
+a * person piloting a fighter jet
+a * person wearing the sweater, a backpack and camping stove, outdoors, RAW, ultra high res
+a * person wearing a scifi spacesuit in space
+a * person wearing yellow jacket, and driving a motorbike
+a * person and Barack Obama cooking together in a kitchen
+a * person and Elon Musk playing the piano together
+a * person and Anne Hathaway are baking a birthday cake
+a * person and Anne Hathaway taking a relaxing hike in the mountains
+a * person and Anne Hathaway sit on a sofa
+a * person and Anne Hathaway enjoy a delicate candlelight dinner
+a * person and Anne Hathaway enjoying a day at an amusement park
+a * person shakes hands with Anne Hathaway in news conference
+a * person and a * person cooking together in a kitchen
+a * person and a * person playing the piano together
+a * person and a * person are baking a birthday cake
+a * person and a * person taking a relaxing hike in the mountains
+a * person and a * person sit on a sofa
+a * person and a * person enjoy a delicate candlelight dinner
+a * person and a * person enjoying a day at an amusement park
+a * person shakes hands with a * person in news conference

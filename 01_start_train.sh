@@ -5,7 +5,7 @@ export PYTHONPATH="${PWD}"
 SD_PATH=$1  # /Your/Path/To/sd-v1-4-full-ema.ckpt
 
 # Usage Example:
-# ./start_train.sh /gavin/pretrained/sd-v1-4-full-ema.ckpt
+# ./start_train.sh ./weights/sd-v1-4-full-ema.ckpt
 
 python main_id_embed.py --base configs/stable-diffusion/aigc_id.yaml \
                -t \

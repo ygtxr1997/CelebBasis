@@ -827,7 +827,7 @@ if __name__ == "__main__":
     """ inversion
     python main.py --base configs/stable-diffusion/v1-finetune.yaml \
                -t \
-               --actual_resume /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+               --actual_resume ./weights/sd-v1-4-full-ema.ckpt \
                -n textualinversion_v \
                --gpus 1, \
                --data_root ./infer_images/training \
@@ -841,6 +841,6 @@ if __name__ == "__main__":
         --scale 10.0 \
         --ddim_steps 50 \
         --embedding_path logs/training2023-01-16T20-18-00_textualinversion/checkpoints/embeddings_gs-6099.pt \
-        --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+        --ckpt ./weights/sd-v1-4-full-ema.ckpt \
         --prompt "a photo of *"
     """

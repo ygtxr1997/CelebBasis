@@ -836,7 +836,7 @@ if __name__ == "__main__":
     """ inversion
     python main_id_embed.py --base configs/stable-diffusion/aigc_id.yaml \
                -t \
-               --actual_resume /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+               --actual_resume ./weights/sd-v1-4-full-ema.ckpt \
                -n textualinversion \
                --gpus 0, \
                --data_root ./infer_images/training
@@ -849,6 +849,6 @@ if __name__ == "__main__":
         --scale 10.0 \
         --ddim_steps 50 \
         --embedding_path logs/training2023-02-16T18-44-25_textualinversion/checkpoints/embeddings_gs-6099.pt \
-        --ckpt /gavin/pretrained/sd-v1-4-full-ema.ckpt \
+        --ckpt ./weights/sd-v1-4-full-ema.ckpt \
         --prompt "* shakes hands with sks"
     """
