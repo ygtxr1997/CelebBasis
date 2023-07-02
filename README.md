@@ -216,6 +216,7 @@ The extracted coefficients or embeddings are under `./weights/ti_id_embeddings/`
 ### TODO
 - [x] release code
 - [x] release celeb basis names
+- [ ] release google colab project
 - [ ] release WebUI extension
 - [ ] release automatic name filter
 - [ ] finetuning with multiple persons 
