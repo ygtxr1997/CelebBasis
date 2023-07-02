@@ -1,4 +1,4 @@
-export PYTHONPATH=/gavin/code/TextualInversion
+export PYTHONPATH="${PWD}"
 
 step_list=(
 #999

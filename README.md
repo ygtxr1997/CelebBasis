@@ -84,6 +84,11 @@ CelebBasis/
       |--sd-v1-4-full-ema.ckpt (7.17GB)
 ```
 
+We use [PIPNet](https://github.com/jhb86253817/PIPNet) to align and crop the face.
+The PIPNet pre-trained weights can be downloaded from [this link](https://github.com/ygtxr1997/CelebBasis/issues/2#issuecomment-1607775140) (provided by @justindujardin)
+or our [Baidu Yun Drive](https://pan.baidu.com/s/1Cgw0i723SyeLo5lbJu-b0Q) with extracting code: `ygss`.
+Please copy `epoch59.pth` and `FaceBoxesV2.pth` to `CelebBasis/evaluation/face_align/PIPNet/weights/`.
+
 ### Usage
 
 #### 0. Face Alignment

@@ -74,7 +74,7 @@ model:
         use_celeb: True
         use_svd: True
         rm_repeats: True
-        celeb_txt: "/gavin/code/TextualInversion/infer_images/wiki_names_v4.txt"  # celebs, wiki_names_v1
+        celeb_txt: "./infer_images/wiki_names_v2.txt"  # celebs, wiki_names_v1
         n_components: 425  # consistent with meta_inner_dim, should be <= n_samples-1
         use_sample_reduce: False
         n_samples: 385

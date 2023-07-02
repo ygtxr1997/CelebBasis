@@ -57,14 +57,13 @@ def get_lmk_model():
         device = torch.device("cpu")
     net = net.to(device)
 
-    # weight_file = "/apdcephfs/share_1290939/ahbanliang/codes/PIPNet/snapshots/WFLW/pip_32_16_60_r101_l2_l1_10_1_nb10/epoch59.pth"
-    weight_file = '/gavin/code/FaceSwapping/inference/PIPNet/weights/epoch59.pth'
+    weight_file = 'evaluation/face_align/PIPNet/weights/epoch59.pth'
     state_dict = torch.load(weight_file, map_location=device)
     net.load_state_dict(state_dict)
 
     detector = FaceBoxesDetector(
         "FaceBoxes",
-        "/gavin/code/FaceSwapping/inference/PIPNet/weights/FaceBoxesV2.pth",
+        "evaluation/face_align/PIPNet/weights/FaceBoxesV2.pth",
         use_gpu=True,
         device="cuda:0",
     )

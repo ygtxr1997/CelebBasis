@@ -1,4 +1,4 @@
-export PYTHONPATH=/gavin/code/TextualInversion
+export PYTHONPATH="${PWD}"
 
 train_set1=("sup01" "sup03" "sup05" "sup07" "sup09" "sup11" "sup13")
 # train_set2=("sup02" "sup04" "sup06" "sup08" "sup10" "sup12" "sup14")
