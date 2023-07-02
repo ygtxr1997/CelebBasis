@@ -37,7 +37,7 @@ def main(args):
     folder_loader = DataLoader(
         folder_dataset,
         batch_size=batch_size,
-        num_workers=1,
+        num_workers=0,
         drop_last=False,
         shuffle=False,
     )
