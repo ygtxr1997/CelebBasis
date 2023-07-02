@@ -483,9 +483,9 @@ class FaceIdDatasetStyleGAN3(Dataset):
         """ """
         super(FaceIdDatasetStyleGAN3, self).__init__()
         images_per_id = 1
-        reg_ids = 0
-        reg_images_per_id = 1
-        reg_repeats = 0
+        reg_ids = 0  # the num of regularization ids, default: 0, our method requires no regularization images
+        reg_images_per_id = 1  # the min num of images per regularization id
+        reg_repeats = 0  # repeat time of each regularization image
         asian = False
 
         if isinstance(specific_ids, str):
