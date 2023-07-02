@@ -209,4 +209,6 @@ dependencies:
     - werkzeug==2.3.3
     - yarl==1.8.1
     - zipp==3.10.0
+    - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+    - -e git+https://github.com/openai/CLIP.git@main#egg=clip
 prefix: /opt/conda/envs/sd
