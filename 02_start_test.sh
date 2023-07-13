@@ -6,10 +6,11 @@ export PYTHONPATH="${PWD}"
 SD_PATH=$1  # /Your/Path/To/sd-v1-4-full-ema.ckpt
 PROMPT_FILE=$2  # /Your/Path/To/Prompt_File.txt, e.g. ./infer_images/example_prompt.txt
 PROJECT_FOLDER=$3  # project folder name under ./logs/, e.g. training2023-06-20T14-58-59_celebbasis
+N_SAMPLES=${4:-8}  # n_samples per text (equals to batch_size), default: 8
 # ------------------------------------------------------
 
 # 2. Edit or modify the following settings as you need
-step_list=(799)  # e.g. (99 199 299 399)
+step_list=(799)  # default: (799), e.g. (99 199 299 399)
 eval_id1_list=(0)  # the id of the 1st person, e.g. (0 1 2 3 4)
 eval_id2_list=(1)  # the id of the 2nd person, e.g. (0 1 2 3 4)
 # ------------------------------------------------------
@@ -32,7 +33,7 @@ for (( i = 0 ; i < ${#eval_id1_list[@]} ; i++ )) do
   for step_id in "${step_list[@]}"; do
     echo embeddings_gs-"$step_id".pt
     python scripts/stable_txt2img.py --ddim_eta 0.0 \
-            --n_samples 8 \
+            --n_samples "${N_SAMPLES}" \
             --n_iter 1 \
             --scale 10.0 \
             --ddim_steps 50 \
