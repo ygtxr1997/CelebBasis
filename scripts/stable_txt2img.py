@@ -266,46 +266,49 @@ def main():
     if opt.fixed_code:
         start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
 
-    from PIL import Image
-    from torchvision.transforms import transforms
-    img_idx = opt.eval_img_idx
-    if opt.eval_dataset in ('vgg0', 'vgg1'):
-        shift_id = 5
-        test_id2 = (opt.eval_id1 + shift_id) % 10
-        id1 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{2}_#{3}.jpg".format(
-            opt.eval_dataset, opt.eval_id1 * 10 + img_idx, opt.eval_id1, img_idx)).convert("RGB")
-        id2 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{2}_#{3}.jpg".format(
-            opt.eval_dataset, test_id2 * 10 + img_idx, test_id2, img_idx)).convert("RGB")
-    elif opt.eval_dataset in ('st1', 'st2'):
-        shift_id = 1
-        test_id2 = (opt.eval_id1 + shift_id) % 10
-        id1 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{1}_#0.jpg".format(
-            opt.eval_dataset, opt.eval_id1)).convert("RGB")
-        id2 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{1}_#0.jpg".format(
-            opt.eval_dataset, test_id2)).convert("RGB")
-    elif opt.eval_dataset in ('e4t1', ):
-        shift_id = 4
-        test_id2 = (opt.eval_id1 + shift_id) % 7
-        id1 = Image.open("/gavin/datasets/aigc_id/dataset_e4t/test/{0:05d}_id{0}_#0.jpg".format(
-            opt.eval_id1)).convert("RGB")
-        id2 = Image.open("/gavin/datasets/aigc_id/dataset_e4t/test/{0:05d}_id{0}_#0.jpg".format(
-            test_id2)).convert("RGB")
+    if config.model.params.personalization_config.params.test_mode == "image":
+        from PIL import Image
+        from torchvision.transforms import transforms
+        img_idx = opt.eval_img_idx
+        if opt.eval_dataset in ('vgg0', 'vgg1'):
+            shift_id = 5
+            test_id2 = (opt.eval_id1 + shift_id) % 10
+            id1 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{2}_#{3}.jpg".format(
+                opt.eval_dataset, opt.eval_id1 * 10 + img_idx, opt.eval_id1, img_idx)).convert("RGB")
+            id2 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{2}_#{3}.jpg".format(
+                opt.eval_dataset, test_id2 * 10 + img_idx, test_id2, img_idx)).convert("RGB")
+        elif opt.eval_dataset in ('st1', 'st2'):
+            shift_id = 1
+            test_id2 = (opt.eval_id1 + shift_id) % 10
+            id1 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{1}_#0.jpg".format(
+                opt.eval_dataset, opt.eval_id1)).convert("RGB")
+            id2 = Image.open("/gavin/datasets/aigc_id/dataset_{0}/{1:05d}_id{1}_#0.jpg".format(
+                opt.eval_dataset, test_id2)).convert("RGB")
+        elif opt.eval_dataset in ('e4t1', ):
+            shift_id = 4
+            test_id2 = (opt.eval_id1 + shift_id) % 7
+            id1 = Image.open("/gavin/datasets/aigc_id/dataset_e4t/test/{0:05d}_id{0}_#0.jpg".format(
+                opt.eval_id1)).convert("RGB")
+            id2 = Image.open("/gavin/datasets/aigc_id/dataset_e4t/test/{0:05d}_id{0}_#0.jpg".format(
+                test_id2)).convert("RGB")
+        else:
+            raise ValueError('Eval dataset not supported:', opt.eval_dataset)
+        trans = transforms.Compose([
+            transforms.Resize((512, 512)),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+        ])
+
+        def pil_to_4d(img: Image):
+            tensor = trans(img).permute(1, 2, 0)
+            tensor = tensor.unsqueeze(0).repeat(batch_size, 1, 1, 1)  # (N,H,W,C)
+            return tensor.to(device)
+
+        faces = torch.cat([pil_to_4d(id1), pil_to_4d(id2)], dim=-1)
     else:
-        raise ValueError('Eval dataset not supported:', opt.eval_dataset)
-    trans = transforms.Compose([
-        transforms.Resize((512, 512)),
-        transforms.ToTensor(),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    ])
-
-    def pil_to_4d(img: Image):
-        tensor = trans(img).permute(1, 2, 0)
-        tensor = tensor.unsqueeze(0).repeat(batch_size, 1, 1, 1)  # (N,H,W,C)
-        return tensor.to(device)
-
-    faces = torch.cat([pil_to_4d(id1), pil_to_4d(id2)], dim=-1)
-    if config.model.params.personalization_config.params.test_mode != "image":
         faces = None
+        test_id2 = opt.eval_id1  # default
+
     if opt.eval_id2 >= 0:
         test_id2 = opt.eval_id2
     image_ori = {
