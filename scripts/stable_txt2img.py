@@ -11,6 +11,8 @@ import time
 from pytorch_lightning import seed_everything
 from torch import autocast
 from contextlib import contextmanager, nullcontext
+from PIL import Image
+from torchvision.transforms import transforms
 
 from ldm.util import instantiate_from_config
 from ldm.models.diffusion.ddim import DDIMSampler
@@ -267,8 +269,6 @@ def main():
         start_code = torch.randn([opt.n_samples, opt.C, opt.H // opt.f, opt.W // opt.f], device=device)
 
     if config.model.params.personalization_config.params.test_mode == "image":
-        from PIL import Image
-        from torchvision.transforms import transforms
         img_idx = opt.eval_img_idx
         if opt.eval_dataset in ('vgg0', 'vgg1'):
             shift_id = 5
