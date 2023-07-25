@@ -1,6 +1,8 @@
 # Inserting Anybody in Diffusion Models via Celeb Basis
 
-[ArXiv](https://arxiv.org/abs/2306.00926) | [Project Page](https://celeb-basis.github.io) 
+<a href='https://arxiv.org/abs/2306.00926'><img src='https://img.shields.io/badge/ArXiv-PDF-red'></a> &nbsp; 
+<a href='https://celeb-basis.github.io'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp; 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ygtxr1997/CelebBasis/blob/dev/notebooks/CelebBasisColab.ipynb) &nbsp; 
 
 <div>
 <span class="author-block">
