@@ -9,7 +9,7 @@ async-timeout==4.0.2
 attrs==22.1.0
 autofaiss==2.15.6
 backcall
-blinker==1.6.2
+blinker
 braceexpand==0.1.7
 cachetools==5.2.0
 certifi
