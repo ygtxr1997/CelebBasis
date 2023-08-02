@@ -33,7 +33,7 @@ model:
         meta_heads: 1
         use_rm_mlp: False
         test_mode: 'coefficient'  # coefficient/embedding/image/all
-        momentum: 0.9
+        momentum: 0.99
         save_fp16: False
 
     unet_config:
