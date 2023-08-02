@@ -100,8 +100,8 @@ data:
       params:
         pickle_path: "/content/datasets/one_shot/ffhq.pickle"  # /Your/Path/To/Images/ffhq.pickle
         split: train
-        num_ids: 1
-        specific_ids: [0,]
+        num_ids: 2
+        specific_ids: [0,1]
         images_per_id: 1
         repeats: 1000
         reg_ids: 1000
