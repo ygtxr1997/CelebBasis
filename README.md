@@ -47,6 +47,7 @@
 
 
 ### Updates
+- **2023/10/11:** Our [paper](https://arxiv.org/abs/2306.00926) is accepted by NIPS'23!
 - **2023/06/23:** Code released!
 
 ### How It Work
@@ -218,6 +219,9 @@ The extracted coefficients or embeddings are under `./weights/ti_id_embeddings/`
 ### TODO
 - [x] release code
 - [x] release celeb basis names
+- [ ] simplify the pipeline
+- [ ] add diffusers supports
+- [ ] add SDXL supports
 - [ ] release google colab project
 - [ ] release WebUI extension
 - [ ] release automatic name filter
